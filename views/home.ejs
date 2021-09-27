@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Clone</title>
+  </head>
+  <body>
+    <h1>My Tweets</h1>
+    <form action="/me/new" method="POST">
+      <textarea
+        name="text"
+        id=""
+        cols="50"
+        rows="4"
+        placeholder="What's happening?"
+      ></textarea>
+      <br />
+      <button>Tweet something!</button>
+    </form>
+    <h2>My Tweets</h2>
+    <% data.myTweets.forEach(t => { %>
+    <article>
+      <h4><%=t.tweet%></h4>
+      <p><%= t.date%></p>
+    </article>
+    <% }) %>
+    <h2>Other Peep's Tweets</h2>
+    <ul>
+      <% for( let user of Object.keys(data)) { %>
+      <li><a href="/<%= user %>"><%= user %></a></li>
+      <% } %>
+    </ul>
+  </body>
+</html>

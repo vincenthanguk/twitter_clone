@@ -1,0 +1,26 @@
+{
+  "me": {
+    "name": "me",
+    "twitterHandle": "me",
+    "followers": 9999,
+    "bio": "Get ripped or die trying"
+  },
+  "vincent": {
+    "name": "vincent",
+    "twitterHandle": "vincenthanguk",
+    "followers": 1337,
+    "bio": "My life is potato."
+  },
+  "nini": {
+    "name": "nini",
+    "twitterHandle": "jour.Nini",
+    "followers": 1338,
+    "bio": "I like turtles."
+  },
+  "ivan": {
+    "name": "ivan",
+    "twitterHandle": "ivan_knivan",
+    "followers": 1336,
+    "bio": "I'm from Sweden, brah."
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= name%>'s Twitter Page</title>
+  </head>
+  <body>
+    <h1>
+      <%= name[0].toUpperCase()+name.slice(1) %> (@<%= twitterHandle%>)'s Tweets
+    </h1>
+    <p>Summary: <%= bio %></p>
+    <p>Followers: <%= followers %></p>
+    <% userTweets.forEach(t => { %>
+    <article>
+      <p><strong><%= t.tweet %></strong></p>
+      <p><%= t.date %></p>
+      <form
+        action="/<%= name %>/5dba6f19-1836-43dc-b660-2ca8bacbbc69/edit"
+        method="GET"
+      ></form>
+      <a href="/<%= name %>/<%= t.id %>/edit">Edit</a>
+      <form method="POST" action="/<%= name %>/<%= t.id %>?_method=DELETE">
+        <button>Delete</button>
+      </form>
+    </article>
+    <% }) %>
+    <form action="/<%= name %>/new" method="POST">
+      <input name="text" type="text" />
+      <input type="submit" />
+    </form>
+    <a href="/"><button>Back</button></a>
+  </body>
+</html>
